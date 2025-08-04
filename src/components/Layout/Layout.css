@@ -1,29 +1,23 @@
-/* Layout 전체 래퍼 */
 .layout-root {
-    background-color: #242424;
-    color: rgba(255,255,255,0.87);
+    /*background-color: #242424;*/
+    color: #212529;
 }
 
-/* 사이드바 */
 .layout-root .sidebar {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-y: auto;
-    background: #333;
+    background: #ededed;
 }
 
-/* 토글 버튼 */
+/* 토글 버튼 스타일 (이미 Sidebar.css에도 일부 있지만, 레이아웃 전용 추가) */
 .layout-root .btn-toggle {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
     background: transparent;
     border: none;
 }
 
-/* collapsed 상태 */
+/* collapsed 시 텍스트 숨김 + 아이콘 중앙 정렬 */
 .layout-root .nav-sidebar-collapsed .btn-toggle span {
     display: none;
 }
