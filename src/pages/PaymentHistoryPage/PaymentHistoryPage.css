@@ -1,0 +1,9 @@
+.payment-history-page {
+    /* 모바일 시 테이블 옆으로 스크롤 생기도록 */
+    overflow-x: auto;
+}
+
+/* 페이지네이션 사이즈 조정 (필요 시) */
+.payment-history-page .pagination .page-link {
+    padding: 0.5rem 0.75rem;
+}
