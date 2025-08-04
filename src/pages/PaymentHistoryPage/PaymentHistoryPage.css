@@ -3,7 +3,30 @@
     overflow-x: auto;
 }
 
-/* 페이지네이션 사이즈 조정 (필요 시) */
-.payment-history-page .pagination .page-link {
-    padding: 0.5rem 0.75rem;
+/* 필터 영역 모바일 스택 */
+.filter-row .form-select,
+.filter-row .form-control,
+.filter-row button,
+.filter-row input[type="date"] {
+    min-width: 120px;
+}
+
+.filter-row {
+    margin-top: 1rem;
+}
+
+/* 작은 화면에서는 세로 정렬 */
+@media (max-width: 768px) {
+    .filter-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .filter-row .col-12 {
+        justify-content: center !important;
+    }
+}
+
+/* 테이블 가로 스크롤 */
+.payment-history-page .table-responsive {
+    overflow-x: auto;
 }
