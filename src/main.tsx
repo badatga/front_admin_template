@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';   // ← named import
 import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Bootstrap CSS 로드
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
-// index.html 에 <div id="root"></div>가 반드시 있어야 합니다.
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root');
+if (!container) throw new Error('Root element not found');
+
+createRoot(container).render(
     <React.StrictMode>
         <App />
     </React.StrictMode>
