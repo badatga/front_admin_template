@@ -19,41 +19,51 @@ export default function LoginForm() {
     };
 
     return (
-        <div className="w-100 w-md-50 p-4 border rounded shadow-sm">
-            <h3 className="mb-4 text-center">관리자 로그인</h3>
+        <main className="form-signin w-100 m-auto">
+            <form>
+                <h1 className="h3 mb-4 fw-normal text-center">관리자 로그인</h1>
 
-            <div className="mb-3">
-                <label htmlFor="loginId" className="form-label">아이디</label>
-                <input
-                    id="loginId"
-                    type="text"
-                    className="form-control"
-                    value={id}
-                    onChange={e => setId(e.target.value)}
-                    placeholder="아이디를 입력하세요"
-                />
-            </div>
+                <div className="form-floating mb-3">
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="floatingLoginId"
+                        placeholder="아이디"
+                        value={id}
+                        onChange={e => setId(e.target.value)}
+                    />
+                    <label htmlFor="floatingLoginId">아이디</label>
+                </div>
 
-            <div className="mb-3">
-                <label htmlFor="loginPw" className="form-label">비밀번호</label>
-                <input
-                    id="loginPw"
-                    type="password"
-                    className="form-control"
-                    value={pw}
-                    onChange={e => setPw(e.target.value)}
-                    placeholder="비밀번호를 입력하세요"
-                />
-            </div>
+                <div className="form-floating mb-3">
+                    <input
+                        type="password"
+                        className="form-control"
+                        id="floatingLoginPw"
+                        placeholder="비밀번호"
+                        value={pw}
+                        onChange={e => setPw(e.target.value)}
+                    />
+                    <label htmlFor="floatingLoginPw">비밀번호</label>
+                </div>
 
-            <div className="d-flex justify-content-between">
-                <button type="button" className="btn btn-secondary" onClick={handleFindPw}>
-                    비밀번호 찾기
-                </button>
-                <button type="button" className="btn btn-primary" onClick={handleLogin}>
+                <button
+                    type="button"
+                    className="w-100 btn btn-lg btn-primary mb-2"
+                    onClick={handleLogin}
+                >
                     로그인
                 </button>
-            </div>
-        </div>
+                <button
+                    type="button"
+                    className="w-100 btn btn-lg btn-outline-secondary"
+                    onClick={handleFindPw}
+                >
+                    비밀번호 찾기
+                </button>
+
+                <p className="mt-5 mb-3 text-muted text-center">&copy; 2025</p>
+            </form>
+        </main>
     );
 }

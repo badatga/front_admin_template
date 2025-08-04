@@ -3,8 +3,10 @@ import LoginForm from '../components/LoginForm';
 
 export default function LoginPage() {
     return (
-        <div className="container d-flex vh-100 align-items-center justify-content-center">
-            <LoginForm />
+        <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
+            <div className="container col-12 col-md-6 col-lg-4">
+                <LoginForm />
+            </div>
         </div>
     );
 }
